@@ -1,0 +1,58 @@
+CREATE DATABASE  IF NOT EXISTS `iorespiro_prod` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `iorespiro_prod`;
+-- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
+--
+-- Host: 206.189.57.74    Database: iorespiro_prod
+-- ------------------------------------------------------
+-- Server version	8.0.23
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `StatoSaluteTestList`
+--
+
+DROP TABLE IF EXISTS `StatoSaluteTestList`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `StatoSaluteTestList` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `refValue` varchar(45) DEFAULT NULL,
+  `image` varchar(200) DEFAULT NULL,
+  `type` int DEFAULT NULL,
+  `placeHolder` varchar(100) DEFAULT NULL,
+  `osType` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `StatoSaluteTestList`
+--
+
+LOCK TABLES `StatoSaluteTestList` WRITE;
+/*!40000 ALTER TABLE `StatoSaluteTestList` DISABLE KEYS */;
+INSERT INTO `StatoSaluteTestList` VALUES (1,'DISTANZA IN BICI','[100,200,300,400]','https://i.ibb.co/y4Y29DP/distancecycling.png',0,'Distanza in metri',1),(2,'DISPENDIO TOTALE CALORIE','[100,200,300,400]','https://i.ibb.co/H2Ms8rk/icona-iorespiro-caloriesburned.png',0,NULL,1),(3,'FREQUENZA CARDIACA','[100,200,300,400]','https://i.ibb.co/5F3wztr/wearable1-3x.png',0,NULL,2),(4,'CONTEGGIO PASSI ','[100,200,300,400]','https://i.ibb.co/f8y7Bsv/icona-iorespiro-stepcount.png',0,'conteggio dei passi',2),(5,'FREQUENZA RESPIRATORIA','[100,200,300,400]','https://i.ibb.co/ZV1WXjb/icona-iorespiro-respiratoryrate.png',0,'Frequenza respiratoria',1),(6,'PICCO DI FLUSSO ESPIRATORIO','[100,200,300,400]','https://i.ibb.co/Q8cjDDZ/icona-iorespiro-peakexpiratoryflowrate.png',0,'Portata espiratoria di picco',1),(68,'DISTANZA TOTALE',NULL,NULL,0,NULL,2),(69,'DISTANZA CAMMINATA',NULL,NULL,0,NULL,1),(76,'DISTANZA CORSA',NULL,NULL,0,NULL,1),(77,'FREQUENZA RESPIRATORIA',NULL,NULL,0,NULL,1),(78,'PESO',NULL,NULL,0,NULL,2),(79,'VOLUME ESPIRATORIO FORZATO (1S)',NULL,NULL,0,'VOLUME ESPIRATORIO FORZATO (1S)',1),(80,'MASSA CORPOREA',NULL,NULL,0,'MASSA CORPOREA',1),(83,'TEMPERATURA CORPOREA',NULL,NULL,0,'TEMPERATURA CORPOREA',1),(92,'TEMPERATURA CORPOREA',NULL,NULL,0,'TEMPERATURA CORPOREA',2),(94,'DISTANZA COPERTA',NULL,NULL,0,'DISTANZA COPERTA',0),(95,'DISPENDIO CALORIE',NULL,NULL,0,NULL,0),(114,'work out','160,60',NULL,1,NULL,NULL),(115,'Work Out','160,60',NULL,1,NULL,NULL),(118,'BP','200,150',NULL,1,NULL,NULL),(119,'BP ','300,150',NULL,1,NULL,NULL),(120,'Blood pressure','120,90',NULL,1,NULL,NULL),(121,'Blood pressure','120,90',NULL,1,NULL,NULL),(122,'Running','2000,1000',NULL,1,NULL,NULL),(123,'Test','160,60',NULL,1,NULL,NULL);
+/*!40000 ALTER TABLE `StatoSaluteTestList` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-13 13:21:41
